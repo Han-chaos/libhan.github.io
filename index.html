@@ -215,6 +215,331 @@
 
 
   
+    <article id="post-Cannot determine embedded database driver class for database type NONE" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/02/Cannot%20determine%20embedded%20database%20driver%20class%20for%20database%20type%20NONE/">Cannot determine embedded database driver class for database type NONE</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/02/Cannot%20determine%20embedded%20database%20driver%20class%20for%20database%20type%20NONE/" class="archive-article-date">
+  	<time datetime="2020-07-02T03:46:37.078Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>@[TOC](Cannot determine embedded database driver class for database type NONE)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 就是这个地方多加了一个这个</span></span><br><span class="line">&lt;packaging&gt;pom&lt;<span class="regexp">/packaging&gt;</span></span><br></pre></td></tr></table></figure>
+<p>导致了报错,去看编译后的文件,也找不到对应的问题.<br>起初以为是yml的问题,最后我又自己敲代码,注意了yml的格式后,转念一想如果是yml文件里面有问题也应该是报错是报的是yml,而不是下面这个错误</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">rror starting ApplicationContext. To display the auto-configuration report re-run your application <span class="keyword">with</span> <span class="string">'debug'</span> enabled.</span><br><span class="line"><span class="number">2019</span><span class="number">-09</span><span class="number">-17</span> <span class="number">10</span>:<span class="number">01</span>:<span class="number">51.242</span> ERROR <span class="number">11060</span> --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : </span><br><span class="line"></span><br><span class="line">***************************</span><br><span class="line">APPLICATION FAILED TO START</span><br><span class="line">***************************</span><br><span class="line"></span><br><span class="line">Description:</span><br><span class="line"></span><br><span class="line">Cannot determine embedded database driver <span class="class"><span class="keyword">class</span> <span class="title">for</span> <span class="title">database</span> <span class="title">type</span> <span class="title">NONE</span></span></span><br><span class="line"><span class="class"></span></span><br><span class="line">Action:</span><br><span class="line"></span><br><span class="line">If you want an embedded database please put a supported one on the classpath. If you have database settings to be loaded <span class="keyword">from</span> a particular profile you may need to active it (no profiles are currently active).</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Process finished <span class="keyword">with</span> exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p> packaging：打包类型，默认是jar，可以配置成war、zip、pom类型。</p>
+<p>POM是最简单的打包类型。不像一个JAR，SAR，或者EAR，它生成的构件只是它本身。</p>
+<p>没有代码需要测试或者编译，也没有资源需要处理。打包类型为POM的项目的默认目标</p>
+<p>生命周期阶段        目标</p>
+<p>package               site:attach-descriptor</p>
+<p>install                   install:install</p>
+<p>deploy                 deploy:deploy<br>简单来说pom 项目里没有java代码，也不执行任何代码，只是为了聚合工程或传递依赖用的。</p>
+<p>总结:心平气和,Peace!</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/02/Cannot%20determine%20embedded%20database%20driver%20class%20for%20database%20type%20NONE/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-程序员誓言" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/02/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%AA%93%E8%A8%80/">程序员誓言</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/02/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%AA%93%E8%A8%80/" class="archive-article-date">
+  	<time datetime="2020-07-02T03:45:09.361Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="The-Programmer’s-Oath（程序员誓言）"><a href="#The-Programmer’s-Oath（程序员誓言）" class="headerlink" title="The Programmer’s Oath（程序员誓言）"></a>The Programmer’s Oath（程序员誓言）</h2><p><strong><em>In order to defend and preserve the honor of the profession of computer<br>programmers, I Promise that, to the best of my ability and judgement<br>为了捍卫和维护计算机程序员的职业荣誉,我承诺,尽我所能和判断力</em></strong></p>
+<blockquote>
+<ol>
+<li>I will not produce harmful code<br>我不会产生有害的代码。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="2">
+<li>The code that I produce will always be my best work. I will not knowingly<br>allow code that is defective either in behavior or structure to accumulate<br>我制作的代码永远是我最好的作品。我不会故意允许在行为或结构上有缺陷<br>的代码。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="3">
+<li>I will produce, with each release, a quick, sure, and repeatable proof that<br>every element of the code works as it should<br>每次发布时,我都会生成一个快速、可靠、可重复的证据,证明代码的每个<br>元素都应该正常工作</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="4">
+<li>I will make frequent, small, releases so that I do not impede the progress of others<br>我将经常发布小版本,这样我就不会妨碍其他人的进展。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="5">
+<li>I will fearlessly and relentlessly improve my creations at every<br>opportunity. I will never degrade them<br>我会抓住每一个机会,无畏地不懈地改进我的代码。我永远不会损害它们。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="6">
+<li>I will do all that i can to keep the productivity of myself, and others, as<br>high as possible i will do nothing that decreases that productivity<br>我将尽我所能保持自己和他人的生产力。我不会做任何降低生产力的事情。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="7">
+<li>I will continuously ensure that others can cover for me, and that I can<br>cover for them<br>我将继续确保支持其他人的工作,并且他们也可以支持我的工作。</li>
+</ol>
+</blockquote>
+<blockquote>
+<ol start="8">
+<li>I will produce estimates that are honest both in magnitude and<br>precision I will not make promises without certainty<br>我将对幅度和精度做出诚实的估计。我不会作出做不到的诺言。</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>9.I will never stop learning and improving my craft<br>我将永远不会停止学习和改进我的技艺。</p>
+</blockquote>
+<p><strong><em>From Robert cmartin</em></strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/02/%E7%A8%8B%E5%BA%8F%E5%91%98%E8%AA%93%E8%A8%80/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-SpringServletContainerInitializer cannot be cast to javax.servlet.ServletContainerInitializer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/02/SpringServletContainerInitializer%20cannot%20be%20cast%20to%20javax.servlet.ServletContainerInitializer/">SpringServletContainerInitializer cannot be cast to javax.servlet.ServletContainerInitializer</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/02/SpringServletContainerInitializer%20cannot%20be%20cast%20to%20javax.servlet.ServletContainerInitializer/" class="archive-article-date">
+  	<time datetime="2020-07-02T03:43:41.102Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong><em>org.springframework.web.SpringServletContainerInitializer cannot be cast to javax.servlet. ServletContainerInitializer</em></strong><br>场景：SSM+tomcat7环境中用IDEA Community运行项目（基于Smart Tomcat），确认Smart Tomcat配置没问题后项目启动报错</p>
+<p><strong>报错原因：</strong><br>项目的pom.xml配置了javax.servlet与tomcat7中的servlet-api.jar中的servlet冲突所造成的.<br><em>但是，工程是聚合工程，若将commons‘程里面的servlet-api依赖的 scope修改成 provided 就会导致其他依赖了 commons的工程找不到引用过 servlet-api中的类</em></p>
+<p><strong>解决方案</strong><br>将commons工程中的pom.xml</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;version&gt;&#123;servlet-api.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<p>将依赖了commons工程中的pom.xml</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;</span><br><span class="line">    &lt;scope&gt;provided&lt;/scope&gt;</span><br><span class="line">    &lt;version&gt;&#123;servlet-api.version&#125;&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/02/SpringServletContainerInitializer%20cannot%20be%20cast%20to%20javax.servlet.ServletContainerInitializer/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-IDEA Community运行SSM，即配置tomcat" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/02/IDEA%20Community%E8%BF%90%E8%A1%8CSSM%EF%BC%8C%E5%8D%B3%E9%85%8D%E7%BD%AEtomcat/">IDEA Community运行SSM，即配置tomcat</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/02/IDEA%20Community%E8%BF%90%E8%A1%8CSSM%EF%BC%8C%E5%8D%B3%E9%85%8D%E7%BD%AEtomcat/" class="archive-article-date">
+  	<time datetime="2020-07-02T03:40:08.615Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>++++++++<strong>原因</strong>：社区版不支持Tomcat插件</p>
+<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a><strong>解决办法</strong>：</h2><p><strong>1.Smart Tomcat</strong></p>
+<ul>
+<li>去JB官网下载对应的支持的插件并集成</li>
+<li>配置对应的Tomcat<img src="https://img-blog.csdnimg.cn/20200624113912606.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDgxMDI2Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></li>
+<li>运行</li>
+</ul>
+<p><strong>2.Maven Plugin</strong></p>
+<ul>
+<li>POM集成</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">!-- Maven Tomcat Plugin --&gt;</span><br><span class="line">&lt;plugin&gt;</span><br><span class="line">  &lt;groupId&gt;org.apache.tomcat.maven&lt;/groupId&gt;</span><br><span class="line">  &lt;artifactId&gt;tomcat7-maven-plugin&lt;/artifactId&gt;</span><br><span class="line">  &lt;version&gt;2.2&lt;/version&gt;</span><br><span class="line">  &lt;configuration&gt;</span><br><span class="line">    &lt;!--Deploy to server--&gt;</span><br><span class="line">    &lt;!--&lt;url&gt;http:<span class="comment">//localhost:8080/manager/text&lt;/url&gt;--&gt;</span></span><br><span class="line">    &lt;!--&lt;username&gt;admin&lt;/username&gt;--&gt;</span><br><span class="line">    &lt;!--&lt;password&gt;admin&lt;/password&gt;--&gt;</span><br><span class="line">    &lt;port&gt;8080&lt;/port&gt;</span><br><span class="line">    &lt;path&gt;/&lt;/path&gt;</span><br><span class="line">    &lt;uriEncoding&gt;UTF-8&lt;/uriEncoding&gt;</span><br><span class="line">    &lt;server&gt;tomcat7&lt;/server&gt;</span><br><span class="line">  &lt;/configuration&gt;</span><br><span class="line">&lt;/plugin&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/02/IDEA%20Community%E8%BF%90%E8%A1%8CSSM%EF%BC%8C%E5%8D%B3%E9%85%8D%E7%BD%AEtomcat/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
